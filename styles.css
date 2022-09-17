@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bg-image {
+    background: url('./images/bg-main-desktop.png') no-repeat center center /cover;
+    height: 100vh;
+    width: 30vw;
+}
+
+.card-details {
+    position: absolute;
+    top: 22.5%;
+    left: 165px;
+    z-index: 1;
+    /* width: 18rem; */
+}
+
+.card--number {
+    width: 18rem;
+    padding-top: 2.2rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.card--number span {
+    letter-spacing: 2px;
+}
+
+.name-expiry-date-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    color: #fff;
+}
+
+.name-expiry-date-wrapper p {
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    color: hsl(270, 3%, 87%);
+}
+
+.name-expiry-date-wrapper p:first-child {
+    text-transform: uppercase;
+}
+
+.card-cvc {
+    position: absolute;
+    z-index: 1;
+    top: 64%;
+    left: 485px;
+    color: #fff;
+}
+
+.card-cvc p {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+form {
+    /* height: 100vh; */
+    width: 70vw;
+    /* display: none; */
+    /* background-color: aquamarine; */
+}
+
+form.active {
+    display: none;
+}
+
+.complete-state {
+    width: 70vw;
+    /* height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    /* display: none; */
+    /* background-color: antiquewhite; */
+}
+
+.complete-state-content {
+    width: 30%;
+    margin: 0 auto;
+    /* background-color: aliceblue; */
+}
+
+.complete-state-content h3 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.complete-state-content p {
+    font-size: 0.85rem;
+    color: hsl(279, 6%, 55%);
+}
+
+.complete-state-content button {
+    margin-top: 2.2rem;
+}
+
+.form-content {
+    width: 30%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    /* background-color: beige; */
+}
+
+.bg-card-front,
+.bg-card-back {
+    position: absolute;
+    width: 22rem;
+}
+
+.bg-card-front img,
+.bg-card-back img {
+    width: 100%;
+}
+
+.bg-card-front {
+    top: 20%;
+    left: 140px;
+}
+
+.bg-card-back {
+    bottom: 20%;
+    left: 200px;
+}
+
+.form-field {
+    margin-bottom: 0.85rem;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(279, 6%, 80%);
+}
+
+.card-holder-name,
+.card-number {
+    width: 100%;
+}
+
+.month-year-wrapper {
+    display: flex;
+    /* gap: 1rem; */
+    width: 50%;
+} 
+
+.month-year-wrapper input {
+    width: 100%;
+}
+
+.month-year-wrapper div:first-of-type {
+    margin-right: 0.5rem;
+}
+
+.date-cvc-wrapper {
+    display: flex;
+}
+
+.cvc {
+    width: 50%;
+}
+
+.cvc input {
+    width: 100%;
+}
+
+button {
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: #fff;
+    padding: 0.85rem 0;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1rem 0 2rem;
+}
+
+@media(max-width: 760px) {
+    /* body {
+        background-color: beige;
+    } */
+
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        /* height: 100vh; */
+        /* background-color: aquamarine; */
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .bg-image-mobile {
+        background: url('./images/bg-main-mobile.png') no-repeat center center /cover;
+        height: 12.5rem;
+        width: 100vw;
+    }
+
+    .bg-image-mobile img {
+        width: 100%;
+    }
+
+    form {
+        width: 100vw;
+        position: relative;
+        top: 90px;
+        padding: 0 1rem;
+    }
+
+    .form-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-details {
+        width: 55%;
+        top: 115px;
+        left: 35px;
+        /* position: static; */
+        padding: 0.25rem;
+        /* background-color: aliceblue; */
+    }
+
+    .card-cvc {
+        /* background-color: aquamarine; */
+        top: 90px;
+        left: 280px;
+    }
+
+    .card--number {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    .bg-card-front,
+    .bg-card-back {
+        /* position: static; */
+        width: 100%;
+    }
+
+    .bg-card-front {
+        top: 110px;
+        left: 30px;   
+    }
+    
+    .bg-card-back {
+        top: 30px;
+        left: 80px;
+    }
+
+    .bg-card-front,
+    .bg-card-back {
+        width: 70%;
+    }
+
+    .bg-card-front img,
+    .bg-card-back img {
+        width: 100%;
+    }
+
+    .name-expiry-date-wrapper {
+        padding-top: 0.5rem;
+        width: 95%;
+        margin: 0 auto;
+        /* flex-direction: column; */
+    }
+
+    .complete-state {
+        width: 100vw;
+        padding: 0 1rem;
+    }
+
+    .complete-state-content {
+        width: 100%;
+    }
+
+    .card-logo {
+        width: 4.5rem;
+        padding: 0.6rem;
+        /* background-color: antiquewhite; */
+    }
+
+    .card-logo img {
+        width: 100%;
+    }
+
+    .icon-complete {
+        width: 4.5rem;
+        margin: 0 auto;
+    }
+
+    .icon-complete img {
+        width: 100%;
+    }
+
+    /* .date-cvc-wrapper {
+        flex-direction: column;
+    } */
+}
